@@ -1,0 +1,4 @@
+name = Webform Submissions Bulk Delete
+description = Deletes webform submissions on the basis of IP address.
+core = 7.x
+dependencies[] = webform

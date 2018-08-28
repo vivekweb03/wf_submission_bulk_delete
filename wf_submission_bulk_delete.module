@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function wf_submission_bulk_delete_menu() {
+  $items = array();
+
+  $items['node/%webform_menu/webform-results/delete-by-ip'] = array(
+    'title' => 'Delete by IP',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('wf_submissions_delete_by_ip_form', 1),
+    'access callback' => 'webform_results_access',
+    'access arguments' => array(1),
+    'file' => 'includes/webform.submissionsdelete.inc',
+    'weight' => 10,
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
